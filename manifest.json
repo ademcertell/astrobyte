@@ -1,0 +1,18 @@
+{
+    "name": "AstroByte - Space News",
+    "lang": "en",
+     "theme_color": "#7d7d7d",
+     "background_color": "#585858",
+     "display": "standalone",
+     "orientation": "portrait",
+     "scope": "/",
+     "start_url": "/",
+    "icons": [
+     {
+      "src": "assets/images/1546-1601.png",
+      "sizes": "512x512",
+      "type": "image\/png",
+      "density": "5.0"
+     }
+    ]
+   }
