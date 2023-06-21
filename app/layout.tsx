@@ -1,16 +1,36 @@
 import "./globals.css";
 
-import { Inter } from "next/font/google";
+import { Metadata } from "next";
 
 import Header from "@/components/Header";
 
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = {
-  title: "AstroByte",
-  description: "",
+export const metadata: Metadata = {
+  title: {
+    default: "AstroByte",
+    template: "%s | AstroByte",
+  },
+  description: "AstroByte is a platform that provides access to NASA news and is designed to combat environmental pollution. By offering up-to-date information on space exploration, observations, discoveries, cosmic events, and space research, Astro",
+  openGraph: {
+    title: "AstroByte",
+    description: "AstroByte is a platform that provides access to NASA news and is designed to combat environmental pollution. By offering up-to-date information on space exploration, observations, discoveries, cosmic events, and space research, Astro",
+    url: "",
+    siteName: "AstroByte",
+    images: [
+      {
+        url: "/favicon.png",
+        alt: "AstroByte",
+      },
+    ],
+    locale: "tr-TR",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -19,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <main>
           <Header />
           {children}
